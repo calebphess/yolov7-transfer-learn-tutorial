@@ -74,43 +74,43 @@
             - There is also a flag determining whether the image is "difficult" or not
                 - This is just if you only want to train on easier data for the model
         ```
-                # creates a list of detection dicts from a given text file relative path
-        def read_dota_label_file(label_file_name:str) -> list:
-            # list of detection dicts
-            detections = []
+            # creates a list of detection dicts from a given text file relative path
+            def read_dota_label_file(label_file_name:str) -> list:
+                # list of detection dicts
+                detections = []
 
-            # open the file
-            with open(label_file_name) as dota_label_file:
-                # read each line
-                for line in dota_label_file:
+                # open the file
+                with open(label_file_name) as dota_label_file:
+                    # read each line
+                    for line in dota_label_file:
 
-                    detection = {}
-                    
-                    # get a list of values by spliting on white space
-                    values = line.split()
+                        detection = {}
+                        
+                        # get a list of values by spliting on white space
+                        values = line.split()
 
-                    # drop any data that isn't strictly bounding boxes
-                    if len(values) != 10:
-                        continue
-                    
-                    # set each detection dict field
-                    detection['x1'] = values[0]
-                    detection['y1'] = values[1]
-                    detection['x2'] = values[2]
-                    detection['y2'] = values[3]
-                    detection['x3'] = values[4]
-                    detection['y3'] = values[5]
-                    detection['x4'] = values[6]
-                    detection['y4'] = values[7]
-                    detection['class'] = values[8]
-                    # True or False if 1 or 0 respectively
-                    detection['difficult'] = (values[9] == '1')
-                    
-                    # add the detection to the list
-                    detections.append(detection)
-                    
-            # return the list of detection dicts
-            return detections
+                        # drop any data that isn't strictly bounding boxes
+                        if len(values) != 10:
+                            continue
+                        
+                        # set each detection dict field
+                        detection['x1'] = values[0]
+                        detection['y1'] = values[1]
+                        detection['x2'] = values[2]
+                        detection['y2'] = values[3]
+                        detection['x3'] = values[4]
+                        detection['y3'] = values[5]
+                        detection['x4'] = values[6]
+                        detection['y4'] = values[7]
+                        detection['class'] = values[8]
+                        # True or False if 1 or 0 respectively
+                        detection['difficult'] = (values[9] == '1')
+                        
+                        # add the detection to the list
+                        detections.append(detection)
+                        
+                # return the list of detection dicts
+                return detections
         ```
         - This next section just gives us the dimensions of the image, why we need this will also be explained later
         ```
