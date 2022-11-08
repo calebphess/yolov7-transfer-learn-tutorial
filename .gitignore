@@ -3,6 +3,11 @@ data/*
 !data/README.md
 !data/test-image.jpg
 
+# ignore everything in models except the README and yolov7-tiny.pt
+models/*
+!models/README.md
+!models/yolov7-tiny.pt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
