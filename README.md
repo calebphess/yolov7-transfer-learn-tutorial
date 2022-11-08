@@ -34,10 +34,13 @@
         - [Part 1](https://drive.google.com/file/d/1BlaGYNNEKGmT6OjZjsJ8HoUYrTTmFcO2/view)
         - [Part 2](https://drive.google.com/file/d/1JBWCHdyZOd9ULX0ng5C9haAt3FMPXa3v/view)
         - [Part 3](https://drive.google.com/file/d/1pEmwJtugIWhiwgBqOtplNUtTG2T454zn/view)
-![Image download](docs/tutorial-images/dota-image-download.png)
+
+    ![Image download](docs/tutorial-images/dota-image-download.png)
+
     - Labels
         - [Label Download Link](https://drive.google.com/file/d/1I-faCP-DOxf6mxcjUTc8mYVPqUgSQxx6/view)
-![Label download](docs/tutorial-images/dota-label-download.png)
+
+    ![Label download](docs/tutorial-images/dota-label-download.png)
 
 
 ## Troubleshooting
