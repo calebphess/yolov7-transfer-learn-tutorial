@@ -252,7 +252,7 @@ def main():
     
     # Read images and annotations
     images = [os.path.join(DOTA_IMAGE_DIR, x) for x in os.listdir(DOTA_IMAGE_DIR) if x[-3:] == "png"]
-    labels = [os.path.join(DOTA_LABEL_DIR, x) for x in os.listdir(DOTA_LABEL_DIR) if x[-3:] == "txt"]
+    labels = [os.path.join(DOTA_FORMATTED_LABEL_DIR, x) for x in os.listdir(DOTA_FORMATTED_LABEL_DIR) if x[-3:] == "txt"]
 
     images.sort()
     labels.sort()
@@ -265,9 +265,9 @@ def main():
     copy_files_to_folder(train_images, DOTA_FORMATTED_IMAGE_DIR + '/train/')
     copy_files_to_folder(validation_images, DOTA_FORMATTED_IMAGE_DIR + '/validation/')
     copy_files_to_folder(test_images, DOTA_FORMATTED_IMAGE_DIR + '/test/')
-    copy_files_to_folder(train_labels, DOTA_FORMATTED_LABEL_DIR + '/train/')
-    copy_files_to_folder(validation_labels, DOTA_FORMATTED_LABEL_DIR + '/validation/')
-    copy_files_to_folder(test_labels, DOTA_FORMATTED_LABEL_DIR  + '/test/')
+    copy_files_to_folder(train_labels, DOTA_FORMATTED_IMAGE_DIR + '/train/')
+    copy_files_to_folder(validation_labels, DOTA_FORMATTED_IMAGE_DIR + '/validation/')
+    copy_files_to_folder(test_labels, DOTA_FORMATTED_IMAGE_DIR  + '/test/')
     
 if __name__ == "__main__":
     main()

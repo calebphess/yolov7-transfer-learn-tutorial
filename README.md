@@ -4,7 +4,8 @@
 ## Citations
 - **[YOLOv7](https://github.com/WongKinYiu/yolov7) made all of this possible.**
 - **[DOTA Dataset](https://captain-whu.github.io/DOTA/dataset.html) used for training the new model.**
-- **Thank you [JJ Jordan](https://www.pexels.com/@see2believe/) for the royalty free test image! (data/test-image.jpg)**
+- **Thank you [JJ Jordan](https://www.pexels.com/@see2believe/) for the royalty free test person image! (data/test-image.jpg)**
+- **Thank you [Matthew LeJune](https://unsplash.com/@matthewlejune) for the royalty free test overhead image! (data/test-image.jpg)**
 
 ## Prerequisites
 - [Conda](https://www.anaconda.com/products/distribution) is installed on your machine
@@ -217,7 +218,25 @@
     - Preprocessing is now complete!
 
 4. Training the model
+    - `./scripts/train_yolo_on_dota.sh`
+    - In this file you can see we define some base training parameters as well as mention some configs
+        - The configs I use here are mostly defaulted but here I explain them a bit more in detail
+            - The `dota_data.yaml` file need the number of classes (nc) and the list of class names which we took from the dota dataset
+            - The `dota_cfg.yaml` is copied from the `yolov7/data/coco.yaml` file but the `nc` at the top is changed to the correct number of classes
+                - This file just defines the size of the network, so you shouldn't need to play with it outside of super advanced ML workflows
+            - The `dota_hyp.scratch.yaml` file is copied from `yolov7/data/hyp.scratch.tiny.yaml` 
+                - Here is where you can play with hyper parameters to try to optimize model performance
+                - This is primarily for more advanced ML workflows
+    - Congratulations! You've successfully trained a new YOLO object detection model
+        - Note the path to the successful run as you will be using it in the next step
+            - Should be something like `yolov7/runs/train/yolov7-overheadX/weights`
+
 5. Verifying the model works
+    - This will be very similar to the initial setup test except you will be using a different model file and test image
+    - Using the directory noted above (as MODEL_PATH) run the detect command
+        - `python detect.py --weights yolov7/runs/train/yolov7-overheadX/weights/best.pt --conf 0.25 --img-size 640 --source ../data/test-data/test-image-overhead.jpg`
+        - On a successful run you will get a response similar to `The image with the result is saved in: runs/detect/expX/test-image.jpg`
+        - You should now be able to open the image in `yolov7/runs/detect/expX/test-image.jpg` like listed in the test run and see the image with some bounding boxes, hopefully accurately identifying a couple of cars
 
 
 ## Troubleshooting
