@@ -1,0 +1,2 @@
+# YOLOv7 Transfer Learning Tutorial
+**A tutorial on how to transfer learn the YOLOv7 model on a new labeled dataset. It will also show you how to preprocess the data to meet the proper format to be trained.**
