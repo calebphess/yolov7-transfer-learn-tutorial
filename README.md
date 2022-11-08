@@ -10,21 +10,29 @@
 - If you are using GPU's to train (which is highly recommended) then ensure [cuda](https://developer.nvidia.com/cuda-toolkit) is configured properly
 
 ## Getting Started
-- Create the conda environment
+1. Create the conda environment
     - `conda create --name "yolov7-tutorial" python=3.6.9`
-- Activate the conda envrinment
+2. Activate the conda envrinment
     - `conda activate yolov7-tutorial`
     - **NOTE:** you will need to do this every time you run a new terminal session
-- Install the required pip packages
+3. Install the required pip packages
     - `pip install -r requirements.txt`
-- Verify that YOLOv7 is working properly ()
+4. Verify that YOLOv7 is working properly ()
     - `./scripts/test_yolo_image_detection.sh`
         - The response should look something like this `The image with the result is saved in: runs/detect/expX/test-image.jpg`
         - You can open that result and you should see a bounding box or two in the image showing detections
-    - Optionally if you are on Mac or have a camera connected to your machine you can run the following to test video
+    - **Optionally** if you are on Mac or have a camera connected to your machine you can run the following to test video
         - `./scripts/test_yolo_video_detection.sh `
         - **NOTE:** you may have to accept the request to access the camera and run the command a second time
         - You can exit by hitting `ctrl+c` a couple times in the terminal window
+
+## Dataset preprocessing tutorial
+**In this example we will be downloading the DOTA dataset and preprocessing it into the proper format for model training**
+1. Download the dataset from [here](https://drive.google.com/drive/folders/1gmeE3D7R62UAtuIFOB9j2M5cUPTwtsxK)
+    - Right click **images** and select **download**
+        - Like [this](tutorial-images/dota-image-download.png)
+    - Right click **labelTxt-v1.0** and select **download**
+        - Like [this](tutorial-images/dota-image-download.png)
 
 ## Troubleshooting
 - "I'm getting some miscellaneous python error referring to a missing library."
