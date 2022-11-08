@@ -3,6 +3,7 @@
 
 ## Citations
 - **[YOLOv7](https://github.com/WongKinYiu/yolov7) made all of this possible.**
+- **[DOTA Dataset](https://captain-whu.github.io/DOTA/dataset.html) used for training the new model.**
 - **Thank you [JJ Jordan](https://www.pexels.com/@see2believe/) for the royalty free test image! (data/test-image.jpg)**
 
 ## Prerequisites
@@ -28,12 +29,15 @@
 
 ## Dataset preprocessing tutorial
 **In this example we will be downloading the DOTA dataset and preprocessing it into the proper format for model training**
-1. Download the dataset from [here](https://drive.google.com/drive/folders/1gmeE3D7R62UAtuIFOB9j2M5cUPTwtsxK)
-    - Right click **images** and select **download**
-![Image download](tutorial-images/dota-image-download.png)
-    - Right click **labelTxt-v1.0** and select **download**
-![Label download](tutorial-images/dota-image-download.png)
-    - **Note:** if this fails you may need to go into the folder and download all the parts individually
+1. Download the dataset from the Google Drive links below (these are from the official dataset release found [here](https://captain-whu.github.io/DOTA/dataset.html))
+    - Images (3 zip files) click the center download button
+        - [Part 1](https://drive.google.com/file/d/1BlaGYNNEKGmT6OjZjsJ8HoUYrTTmFcO2/view)
+        - [Part 2](https://drive.google.com/file/d/1JBWCHdyZOd9ULX0ng5C9haAt3FMPXa3v/view)
+        - [Part 3](https://drive.google.com/file/d/1pEmwJtugIWhiwgBqOtplNUtTG2T454zn/view)
+![Image download](docs/tutorial-images/dota-image-download.png)
+    - [Labels] (https://drive.google.com/file/d/1I-faCP-DOxf6mxcjUTc8mYVPqUgSQxx6/view)
+![Label download](docs/tutorial-images/dota-image-download.png)
+
 
 ## Troubleshooting
 - "I'm getting some miscellaneous python error referring to a missing library."
