@@ -30,9 +30,10 @@
 **In this example we will be downloading the DOTA dataset and preprocessing it into the proper format for model training**
 1. Download the dataset from [here](https://drive.google.com/drive/folders/1gmeE3D7R62UAtuIFOB9j2M5cUPTwtsxK)
     - Right click **images** and select **download**
-        - Like [this](tutorial-images/dota-image-download.png)
+![Image download](tutorial-images/dota-image-download.png)
     - Right click **labelTxt-v1.0** and select **download**
-        - ![label download](tutorial-images/dota-image-download.png)
+![Label download](tutorial-images/dota-image-download.png)
+    - **Note:** if this fails you may need to go into the folder and download all the parts individually
 
 ## Troubleshooting
 - "I'm getting some miscellaneous python error referring to a missing library."
