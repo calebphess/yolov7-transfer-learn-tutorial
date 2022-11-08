@@ -21,7 +21,7 @@
 4. Verify that YOLOv7 is working properly ()
     - `./scripts/test_yolo_image_detection.sh`
         - The response should look something like this `The image with the result is saved in: runs/detect/expX/test-image.jpg`
-        - You can open that result and you should see a bounding box or two in the image showing detections
+        - You can open that result and you should see a bounding box or two in the image showing detections (it will be in yolov7/runs/... like what's listed above)
     - **Optionally** if you are on Mac or have a camera connected to your machine you can run the following to test video
         - `./scripts/test_yolo_video_detection.sh `
         - **NOTE:** you may have to accept the request to access the camera and run the command a second time
@@ -53,12 +53,18 @@
         - `unzip labelTxt.zip`
         - `rm labelTxt.zip`
     - Unzip the images into the images folder and remove the zip files
+        - `cd ..`
         - `unzip part1.zip`
         - `unzip part2.zip`
         - `unzip part3.zip`
         - `rm part*`
-    - Make the scripts folder to hold our preprocessing scripts
-        - `mkdir scripts`
+    - Make the scripts folder for our preprocessing scripts and move the example scripts over
+        - `cp -r ../../scripts/example-dota-scripts scripts`
+
+3. Preprocess the data
+    - Run the preprocess script
+        - `python preprocess.py`
+        - There's a lot going on here so I'll explain the important parts below
 
 
 ## Troubleshooting
