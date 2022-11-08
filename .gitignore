@@ -1,7 +1,7 @@
 # ignore everything in data except the README and test image
 data/*
 !data/README.md
-!data/test-image.jpg
+!data/test-data/
 
 # ignore everything in models except the README and yolov7-tiny.pt
 models/*

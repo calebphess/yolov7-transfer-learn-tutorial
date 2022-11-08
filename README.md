@@ -42,6 +42,24 @@
 
     ![Label download](docs/tutorial-images/dota-label-download.png)
 
+2. Create the data directory for your labeled data and move all the files into the right place
+    - Make the right directory structure
+        - `mkdir -p data/DOTA/labels`
+    - Copy the data to the right place (depends on where you downloaded the files to)
+        - `mv ~/Downloads/part* data/DOTA`
+        - `mv ~/Downloads/labelTxt.zip data/DOTA/labels`
+    - Unzip the labels into the labels folder and remove the zip file
+        - `cd data/DOTA/labels`
+        - `unzip labelTxt.zip`
+        - `rm labelTxt.zip`
+    - Unzip the images into the images folder and remove the zip files
+        - `unzip part1.zip`
+        - `unzip part2.zip`
+        - `unzip part3.zip`
+        - `rm part*`
+    - Make the scripts folder to hold our preprocessing scripts
+        - `mkdir scripts`
+
 
 ## Troubleshooting
 - "I'm getting some miscellaneous python error referring to a missing library."

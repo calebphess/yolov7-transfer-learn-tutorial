@@ -1,2 +1,5 @@
 # install requiremets from yolov7 repo
 -r yolov7/requirements.txt
+
+# packages required for preprocessing
+scikit-learn
