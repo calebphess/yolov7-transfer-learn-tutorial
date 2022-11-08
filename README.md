@@ -18,9 +18,14 @@
 - Install the required pip packages
     - `pip install -r requirements.txt`
 - Verify that YOLOv7 is working properly ()
-    - `cd yolov7`
-    - `python detect.py`
-
+    - `./scripts/test_yolo_image_detection.sh`
+        - The response should look something like this `The image with the result is saved in: runs/detect/expX/test-image.jpg`
+        - You can open that result and you should see a bounding box or two in the image showing detections
+    - Optionally if you are on Mac or have a camera connected to your machine you can run the following to test video
+        - `./scripts/test_yolo_video_detection.sh `
+        - **NOTE:** you may have to accept the request to access the camera and run the command a second time
+        - You can exit by hitting `ctrl+c` a couple times in the terminal window
+        
 ## Troubleshooting
 - "I'm getting some miscellaneous python error referring to a missing library"
     1. Ensure that you have activated your conda environment
