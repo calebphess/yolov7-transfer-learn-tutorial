@@ -32,7 +32,7 @@
     - Right click **images** and select **download**
         - Like [this](tutorial-images/dota-image-download.png)
     - Right click **labelTxt-v1.0** and select **download**
-        - Like [this](tutorial-images/dota-image-download.png)
+        - ![label download](tutorial-images/dota-image-download.png)
 
 ## Troubleshooting
 - "I'm getting some miscellaneous python error referring to a missing library."
