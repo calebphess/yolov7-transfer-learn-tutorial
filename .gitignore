@@ -1,6 +1,7 @@
-# ignore everything in data except the README
+# ignore everything in data except the README and test image
 data/*
 !data/README.md
+!data/test-image.jpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
