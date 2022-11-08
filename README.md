@@ -216,8 +216,8 @@
             - It will also print out the label information in the proper format to the terminal
     - Preprocessing is now complete!
 
-    4. Training the model
-    5. Verifying the model works
+4. Training the model
+5. Verifying the model works
 
 
 ## Troubleshooting
