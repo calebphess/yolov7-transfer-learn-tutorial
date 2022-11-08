@@ -1,0 +1,2 @@
+# install requiremets from yolov7 repo
+-r yolov7/requirements.txt
