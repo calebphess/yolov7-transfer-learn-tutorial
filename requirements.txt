@@ -3,3 +3,6 @@
 
 # packages required for preprocessing
 scikit-learn
+
+# this is a big package and may be OS specific
+opencv-python
